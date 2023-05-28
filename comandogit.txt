@@ -1,0 +1,30 @@
+// listar credenciales globales
+
+git config --global --list
+
+// configuración de credenciales
+git config --global user.name "usuario"
+git config --global user.password "clave"
+git config --global user.email "correo"
+
+
+// remover configuración de credenciales
+git config --global --remove-section user.name="usuario"
+git config --global --remove-section user.password="clave"
+git config --global --remove-section user.email="correo"
+
+// sincronizar el repositorio en github
+
+git init
+git add . 
+git commit -m 'Inicio del repositorio de adso 15 y 16'
+git remote add origin https://github.com/samvasquez/apps.git
+git push -u origin master
+
+
+// Para clonar el repositorio solo se realiza una vez
+git clone https://github.com/samvasquez/apps.git
+
+// Para actualizar 
+git pull origin master
+
