@@ -19,12 +19,13 @@ git init
 git add . 
 git commit -m 'Inicio del repositorio de adso 15 y 16'
 git remote add origin https://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@github.com/samvasquez/apps.git
-git push -u origin master
+git push -u origin main
 
 
 // Para clonar el repositorio solo se realiza una vez
 git clone https://github.com/samvasquez/apps.git
 
 // Para actualizar 
-git pull origin master
+git pull origin main
+
 
