@@ -1,14 +1,15 @@
-if (sessionStorage.getItem('user') != null) {
-    var UsuarioActual = jQuery.parseJSON(sessionStorage.getItem('user'));
-    if (UsuarioActual[0].rol > 1) {
-        $('#contenido').load('Paginas/menuusuario.html');
-    } else {
-        $('#contenido').load('Paginas/menu.html');
+if   (sessionStorage.getItem('user') != null){
+    var usuarioActual = JQuery.parseJSON (sessionStorage.getItem('user'));
+    if (usuarioActual[0].rol > 1){
+        $('contenido').load ('paginas/menuusuario.html');
+    }else{
+        $('contenido').load ('paginas/menu');
     }
-} else {
-    $('#contenido').load('Paginas/login.html');
+}else {
+    $('contenido').load ('paginas/login');
+
 }
 
-function Recargar(url) {
-    location.href = url;
+function recargar(url){
+    location.href  = url;
 }
