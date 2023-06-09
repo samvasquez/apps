@@ -1,5 +1,6 @@
-const { json } = require("body-parser");
-const post = require("../modelos/post");
+const { json } = require('body-parser');
+const express = require('express');
+ const Router = express.Router();
 
 Router.post('/',async(req,res)=>{
 
@@ -41,3 +42,19 @@ Router.delete('/:postId',async(req,res)=>{
         
     }
 });
+
+Router.patch('/:postId',async (req,res)=>{
+    try {
+        const updatepost = await post . updateOne({_id:req.params.postId},
+            {$set:{title:req.body,title}});
+
+            res.json(updatepost);
+        
+    } catch (error) {
+        
+        res.json({message:error});
+    }
+
+});
+
+module.exports = Router;

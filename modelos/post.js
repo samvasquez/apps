@@ -1,11 +1,11 @@
-const mongoose = require ('mongose');
+const mongoose = require ('mongoose');
 const PostSchema = mongoose.Schema({
     title:{
-        type :stringify,
+        type :String,
         require :true
     },
     description:{
-        type: string,
+        type: String,
         require : true
     },
     Date :{
@@ -14,4 +14,4 @@ const PostSchema = mongoose.Schema({
     }
 });
 
-module.exports=mongoose.module('post',PostSchema);
+module.exports= mongoose.model('post',PostSchema);
