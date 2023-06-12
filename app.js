@@ -19,7 +19,7 @@ app.get('/',(req,res)=>{
 
 });
 
-app.post('/',(req,res) => {
+app.post('/routes/post.js',(req,res) => {
 
     res.send('dato recibido');
 })
